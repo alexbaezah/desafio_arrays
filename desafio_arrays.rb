@@ -49,7 +49,8 @@ a.each do |num|
     suma += num.to_i
 end
     puts suma
-
+ puts '3.3) Obtener el promedio de los elementos del arreglo.'
+ puts suma / a.count.to_f
 
 
 
