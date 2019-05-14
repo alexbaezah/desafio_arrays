@@ -51,7 +51,28 @@ end
     puts suma
  puts '3.3) Obtener el promedio de los elementos del arreglo.'
  puts suma / a.count.to_f
+puts '3.4) Se tiene un arreglo de productos'
+puts print productos = ["producto 1 ", "producto 2 " , "producto 3 " , "producto 4 "]
+productos.each do |i|
+    puts "#{i}"
+end
+puts '3.5) Se tiene un arreglo de productos y precios:'
+productos = %w(Producto1 Producto2 Producto3 Producto4)
+precios = [1000, 2000, 3000, 4000]
 
+indice = productos.index('Producto3')
+precio_que_necesito = precios[indice]
+
+
+products = {
+  'Producto1' => 1000,
+  'Producto2' => 2000,
+  'Producto3' => 3000,
+  'Producto4' => 4000
+}
+
+precio_que_necesito = products['Producto3']
+puts products
 
 
  
