@@ -54,25 +54,43 @@ end
 puts '3.4) Se tiene un arreglo de productos'
 puts print productos = ["producto 1 ", "producto 2 " , "producto 3 " , "producto 4 "]
 productos.each do |i|
-    puts "#{i}"
+    puts "<div class= 'product'></div> #{i} </p></div> \n"
 end
-puts '3.5) Se tiene un arreglo de productos y precios:'
-productos = %w(Producto1 Producto2 Producto3 Producto4)
-precios = [1000, 2000, 3000, 4000]
+puts '5) Se tiene un arreglo de productos y precios:'
+products = %w(Producto1 Producto2 Producto3 Producto4)
+prices = %w[1000 2000 1500 950]
+html = ''
+products.length.times do |i|
+  puts "<div class='product'><p> #{products[i]} </p><p> Precio: #{prices[i]} </p></div>\n"
+end
 
-indice = productos.index('Producto3')
-precio_que_necesito = precios[indice]
+puts '6) Dado los arrays'
 
+puts print a = [1,2,3,9,12,31, "domingo"]
+puts print b = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 
-products = {
-  'Producto1' => 1000,
-  'Producto2' => 2000,
-  'Producto3' => 3000,
-  'Producto4' => 4000
-}
+puts '1. La concatenación de a y b. (hint: Los elementos que se repiten en a y b pueden aparecer dos
+veces en el resultado).'
 
-precio_que_necesito = products['Producto3']
-puts products
+c = a + b
+puts print c 
+d = a.dup
+b.each do |i|
+ puts print  d.push(i) unless d.include?(i)
+end
 
+puts '2. La unión de a y b. (hint: Los elementos que se repiten en a y b NO deben aparecer repetidos en
+el resultado).'
 
- 
+e = []
+a.each do |i|
+ puts print e.push(i) if b.include?(i)
+end
+
+puts '4. Intercalar los elementos:'
+
+f = []
+a.length.times do |i|
+  g = [a[i], b[i]]
+ puts print  f.push(g)
+end
